@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
+.container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line1{
+    position: relative;
+    width: 130px;
+    height: 130px;
+    margin: -25px;
+    border-radius: 70px;
+    border: 4px solid transparent;
+    border-top: 4px solid #24ecff;
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(odeg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.line1::before{
+    content: '';
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #24ecff;
+    box-shadow: 0 0 0 5px #24ecff33,
+    0 0 0 10px #24ecff33;
+}
+
+.line1:nth-child(2){
+  animation: animate2 4s linear infinite;
+  animation-delay: -1s;
+  border-top: 4px solid transparent;
+  border-left: 4px solid #e5ff24;
+}
+.line1:nth-child(2)::before{
+    content: '';
+    position: absolute;
+    top: initial;
+    bottom: 6px;
+    left: 8px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #e5ff24;
+    box-shadow: 0 0 0 5px #93ff2d33,
+    0 0 0 10px #93ff2d33;
+}
+@keyframes animate2{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+
+.line1:nth-child(3){
+    animation: animate2 4s linear infinite;
+    animation-delay: -3s;
+    position: absolute;
+    top: -40.66px;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #e41cf8;
+
+    
+}
+.line1:nth-child(3)::before{
+    content: '';
+    position: absolute;
+    top: initial;
+    bottom: 6px;
+    left: 8px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #e41cf8;
+    box-shadow: 0 0 0 5px #e41cf833,
+    0 0 0 10px #e41cf833;
+}
+p{
+    position: absolute;
+    color: #fff;
+    font-size: 1.5em;
+    font-family: consolas;
+    bottom: -80px;
+    letter-spacing: 0.15em;
+}
